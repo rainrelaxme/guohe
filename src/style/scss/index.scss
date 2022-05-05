@@ -1,0 +1,40 @@
+
+$title-size: 36px;
+.el-header{
+  position: fixed;
+  width: 100%;
+  z-index: 9;
+  padding: 0 !important;
+  .el-menu-nav{
+    display: flex;
+    border-bottom: 0 !important;
+    .clear{
+      border-bottom: none !important;
+    }
+    .el-menu-item:hover{
+      background-color: rgba(48,66,105,1) !important;
+    }
+    .nav_img{
+      &>img{
+        width: 45px;
+        height: 45px;
+      }
+      &:hover{
+        background: none !important;
+      }
+    }
+    .nav_title{
+      margin: 0 auto !important;
+      font-size: $title-size;
+      &:hover{
+        background: none !important;
+      }
+    }
+    i{
+      font-size: 22px;
+    }
+  }
+}
+body .el-main{
+  padding: 0;
+}

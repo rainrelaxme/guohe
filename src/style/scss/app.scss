@@ -1,0 +1,260 @@
+// 初始化
+html,body,#app{
+  width: 100%;
+  height: 100%;
+}
+body p{
+  margin: 0;
+}
+// 水平折叠收起菜单后hover状态
+.el-menu--popup{
+  min-width: auto !important;
+  .el-menu-item:hover{
+    outline: 0;
+    background-color: rgb(48, 66, 105)!important;
+    color: #fff!important;
+  }
+}
+// 折叠后-end
+.el-container{
+  height: 100%;
+  .el-container{
+    background:rgba(244, 248, 249, 1);
+    overflow: auto;
+    flex-basis: 0;
+    min-height: 100%;
+    height: auto;
+    .el-container{
+      height: fit-content;
+    }
+  }
+  .containLeft:not(.el-menu--collapse){
+    width: 200px;
+  }
+  .containLeft{
+    .el-submenu__title:hover,.el-menu-item:hover{
+      outline: 0;
+      background-color: rgb(48, 66, 105)!important;
+      color: #fff!important;
+      i{
+        color: #fff;
+      }
+    }
+    .el-submenu__title{
+      i{
+        color: rgb(162, 197, 206);
+      }
+    }
+    .el-menu-item{
+      min-width: auto;
+    }
+  }
+}
+.messageNum{
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  line-height: normal;
+  position: absolute;
+  right: 8px;
+  top: 10px;
+}
+.paddingBox{
+  padding: 6% 4% 4% 4%;
+}
+.systemBox,.parameterBox,.workbenchBox{
+  padding-top: 60px;
+  height: 100%;
+}
+.collapse-icon{
+  // 带三级菜单时的功能图标
+  font-size: 20px;
+  padding: 1%;
+  cursor: pointer;
+}
+.mb-2{
+  margin-bottom: 2%;
+}
+.el-menu .el-menu-item i.iconfont,.el-menu .el-submenu i.iconfont {
+  color: inherit;
+  margin-right: 5px;
+  width: 24px;
+  text-align: center;
+  font-size: 18px;
+  vertical-align: middle;
+  display: inline-block;
+  line-height: 1;
+}
+.boxShadow{
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .12);
+}
+.star label::before{
+  content: "*";
+  color: #f56c6c;
+  margin-right: 4px;
+}
+.b-t{
+  border-top: 1px solid #dee2e6;
+}
+.b-r{
+  border-right: 1px solid #dee2e6;
+}
+.b-b{
+  border-bottom: 1px solid #dee2e6;
+}
+.b-l{
+  border-left: 1px solid #dee2e6;
+}
+.w-100{
+  width: 100%;
+}
+// 颜色
+.white{
+  color: #FFF !important;
+}
+.bg-white{
+  background-color: #FFF !important;
+}
+.red{
+  color: red;
+}
+.danger{
+  color: #F56C6C !important;
+}
+.bg-red{
+  background-color: red;
+  color: #fff;
+}
+.blue{
+  color: #008ffd !important;
+}
+.yellow{
+  color: rgb(255, 208, 75) !important;
+}
+.bg-black{
+  background-color: #212a39!important;
+}
+.gray{
+  color: #9498a3!important;
+}
+// 常用
+.flex-center{
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+.center{
+  text-align: center !important;
+}
+:focus,button:focus{
+  outline: none !important;
+}
+
+img{
+  max-width: 100% !important;
+  max-height: 100% !important;
+}
+.right{
+  float: right !important;
+}
+.left{
+  float: left !important;
+}
+.p-0{
+  padding: 0 !important;
+}
+.m-0{
+  margin: 0 !important;
+}
+.padding{
+  padding: 4%;
+}
+.minScreen{
+  display: none;
+}
+
+// 移动端适配
+@media screen and (max-width: 640px){
+  // 弹出框类
+  .el-message-box__wrapper .el-message-box{
+    width: 80%;
+  }
+  // 消息提示
+  body .el-message{
+    width: 90%;
+    min-width: auto;
+  }
+
+  // 登录
+  .loginBox{
+    .el-main{
+      width: 90%;
+      padding-top: 0;
+      div.FRACAS span{
+        font-size: 18px;
+      }
+    }
+  }
+  // index-导航
+  .el-drawer__body{
+    overflow: auto;
+    .el-menu.drawer-nav{
+      height: 100%;
+      border: none;
+      .el-submenu__title:hover{
+        color: #409EFF;
+      }
+      .el-menu-item{
+        color: #9498a3 ;
+      }
+      .el-menu-item:focus{
+        background: none;
+        color: #fff !important;
+      }
+    }
+  }
+  .maxScreen{
+    display: none !important;
+  }
+  .minScreen{
+    display: block;
+    position: fixed;
+    width: 100%;
+    z-index: 9;
+    background: #fff;
+    i{
+      font-size: 1.5rem;
+    }
+    .top{
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      h4{
+        margin-bottom: 0;
+      }
+    }
+    .bottom{
+      &>p{
+        position: relative;
+        .messageNum{
+          right: -10px;
+          top: -10px;
+        }
+      }
+      padding-top: 4%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+  }
+  body main.el-main{
+    padding-top: 30%;
+  }
+  
+
+
+}

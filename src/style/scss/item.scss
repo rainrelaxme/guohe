@@ -1,0 +1,101 @@
+.itemBox,.surveyBox{
+  .flex-between{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .tableBox{
+    .allItem{
+      .item{
+        border: 1px solid #dee2e6;
+        &:hover{
+          border: 1px solid rgb(23, 43, 77);
+          cursor: pointer;
+          .tit{
+            background-color: rgb(23, 43, 77);
+            color: #fff;
+            .time{
+              color: #fff !important;
+            }
+          }
+        }
+       margin: 1%;
+       .tit{
+        padding: 1%;
+        border-bottom: 1px solid #dee2e6;
+        padding-bottom: 1%;
+        .el-row{
+          width: 100%;
+          .el-col:last-child{
+            text-align: right;
+            color: #666666;
+            font-size: 14px;
+          }
+        }
+       }
+       .itemMain{
+        padding: 1%;
+        display: flex;
+        align-items: center;
+        color: #666666;
+        font-size: 14px;
+        .el-divider{
+          height: 2em;
+        }
+        .icon{
+          display: inline-block;
+          width: 5px;
+          height: 5px;
+          background-color: #409EFF;
+          border-radius: 50%;
+          vertical-align: middle;
+          margin-right: 5px;
+        }
+        &>span{
+          padding: 0 5px;
+          display: inline-block;
+        }
+        .progressBox{
+          flex: 1;
+          display: flex;
+          align-items: center;
+          .el-progress{
+            flex: 1;
+          }
+        }
+
+       }
+      }
+    }
+  }
+}
+
+// 移动端适配
+@media screen and (max-width: 640px){
+  .itemBox{
+    .tableBox{
+      .allItem{
+        .item{
+          margin: 4% 1%;
+          .tit{
+            .el-col{
+              text-align: left !important;
+              padding: 5px;
+            }
+          }
+          .itemMain{
+            flex-direction: column;
+            align-items: flex-start;
+            .el-divider{
+              display: none;
+            }
+            &>span{
+              padding: 5px;
+            }
+          }
+        }
+      }
+      
+    }
+  }
+}

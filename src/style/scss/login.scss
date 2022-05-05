@@ -1,0 +1,33 @@
+.loginBox{
+  height: 100%;
+  .el-container{
+    height: 100%;
+    position: relative;
+  }
+  .el-main{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    .loginLogo{
+      text-align: center;
+    }
+    .FRACAS{
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 20px;
+      span{
+        font-size: 36px;
+      }
+    }
+    .el-form-item{
+      .el-form-item__content{
+        margin-left: 0px !important;
+      }
+      .el-button{
+        width: 100%;
+      }
+    }
+  }
+}
+

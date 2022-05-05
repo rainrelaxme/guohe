@@ -1,0 +1,53 @@
+.parameterBox{
+  // 项目模板
+  .templateBox{
+    .el-form-item{
+      .el-form-item__label{
+        width: 100px !important;
+      }
+      .el-form-item__content{
+        margin-left: 100px !important;
+        .el-select{
+          width: 100%;
+        }
+        .el-textarea__inner:hover{
+          cursor: pointer;
+        }
+      }
+    }
+    .item-group{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .el-form-item{
+        width: 48%;
+      }
+    }
+    .staffBox{
+      padding: 2% 0;
+      border: 1px solid #ccc;
+      border-radius: 2px;
+      .el-tree,.staffList{
+        max-height: 300px;
+        overflow: auto;
+      }
+      .btnGroup{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 5%;
+        .el-button{
+          width: 100px;
+          margin-left: 0px;
+        }
+      }
+    }
+  }
+  // 工具库
+  .toolLibraryBox{
+    .el-form-item__content{
+      justify-content: flex-start;
+    }
+  }
+
+}

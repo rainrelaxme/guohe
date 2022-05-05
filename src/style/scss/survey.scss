@@ -1,0 +1,134 @@
+.surveyBox{
+  ul{
+    padding: 0;
+  }
+  .title{
+    font-size: 14px;
+    font-weight: bold;
+  }
+  &>.main{
+    height: 100%;
+    // 左侧
+    .main-left{
+      min-height: 100%;
+      .left-top{
+        .item{
+          display: flex;
+          flex-direction: column;
+          padding: 4% 0;
+          align-items: center;
+          .num{
+            font-size: 24px;
+            font-weight: bold;
+          }
+          .type{
+            font-size: 14px;
+          }
+        }
+        .el-col:first-child{
+          border-left: 5px solid #F0AA39;
+          .num{
+            color: #F0AA39;
+          }
+        }
+        .el-col:nth-of-type(2){
+          border-left: 5px solid #E8585D;
+          .num{
+            color: #E8585D;
+          }
+        }
+        .el-col:nth-of-type(3){
+          border-left: 5px solid #6AD7B4;
+          .num{
+            color: #6AD7B4;
+          }
+        }
+        .el-col:nth-of-type(4){
+          border-left: 5px solid #ADA1ED;
+          .num{
+            color: #ADA1ED;
+          }
+        }
+      }
+      .left-center{
+        .itemTrendBox{
+          display: flex;
+          .itemTrends{
+            .timeBox>div{
+              padding: 2%;
+              .des{
+                color: #03A9F4;
+                font-size: 12px;
+              }
+            }
+            .timeBox>div:first-child{
+              border-bottom: 1px solid #dee2e6;
+            }
+          }
+          .recentNeed{
+            .barBox{
+              height: 100%;
+              overflow: hidden;
+              &>div{
+                padding: 2%;
+              }
+              &>div:first-child{
+                border-bottom: 1px solid #dee2e6;
+              }
+              #barChart{
+                height: 85%;
+              }
+            }
+          }
+        }
+      }
+      .left-bottom{
+        .itemList{
+          &>div{
+            padding: 1%;
+          }
+          .title{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .link-icon{
+              cursor: pointer;
+            }
+          }
+          .tableBox{
+            .allItem{
+              .tit{
+                font-size: 14px;
+                .el-row{
+                  &>div:first-child{
+                    font-weight: bold;
+                  }
+                  &>div:last-child{
+                    font-size: 12px;
+                  }
+                }
+              }
+              .itemMain2{
+                padding-top: 0;
+                &>span{
+                  width: 10%;
+                  .icon{
+                    background-color: #ED6E58;
+                  }
+                }
+                &>.el-divider{
+                  // width: 1px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    // 右侧
+    .main-right{
+      min-height: 100%;
+    }
+    
+  }
+}
